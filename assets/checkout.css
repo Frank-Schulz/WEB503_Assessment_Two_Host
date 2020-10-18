@@ -1,0 +1,142 @@
+button.continue {
+    text-align: center;
+    cursor: pointer;
+    padding: 11px 28px;
+    border-radius: 6px;
+    font-size: 20px;
+    display: block;
+    border: 1px solid darkorange;
+    color: #fff;
+    background-color: darkorange;
+    font-weight: 700;
+    margin: 0;
+    width: 100%;
+}
+
+.shipments,
+.sidebar {
+    margin: 0 auto;
+    max-width: 860px;
+}
+
+div.shipment > .details > .status {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+div.shipment {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+div.shipment table {
+    clear: both;
+    width: 100%;
+    background: #ffffff;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+div.shipment table tbody tr:first-child {
+    border-top: none;
+}
+
+div.shipment table tbody tr {
+    border-top: 2px solid #f0f0f0;
+    vertical-align: top;
+}
+
+div.shipment table tbody td {
+    padding: 10px;
+    font-size: 14px;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+}
+
+div.shipment table tbody td.quantity {
+    padding-right: 0;
+}
+
+/* div.shipment table tbody td.quantity {
+    padding-left: 0;
+} */
+
+div.shipment table tbody td.price {
+    padding-left: 0;
+    text-align: right;
+}
+
+.shipment table tbody tr {
+    display: grid;
+    grid-template-columns: 50px auto 80px;
+    width: 100%;
+}
+
+div.shipment table tbody td.quantity span {
+    color: #999999;
+}
+
+.keep-shopping a::before {
+    content: "\f07a";
+    color: #148fcc;
+    text-decoration: none;
+}
+
+.keep-shopping a {
+    color: #148fcc;
+    text-decoration: none;
+}
+
+.sidebar {
+    text-align: center;
+}
+
+div.sidebar #trolleyTotals {
+    /* position: sticky;
+    top: 90px; */
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+table {
+    width: 100%;
+}
+
+table.trolleySubtotal tr td {
+    border-color: #e6e6e6;
+    border-top-color: rgb(230, 230, 230);
+    padding: 10px 0;
+    font-size: 16px;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+table.trolleySubtotal tr td + td {
+    text-align: right;
+}
+
+table.trolleySubtotal tr:first-child td {
+    border-top: none;
+}
+
+.table > tbody > tr > td{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+        border-top-color: rgb(221, 221, 221);
+        border-top-width: 1px;
+}
+
+@media only screen and (max-width: 500px) {
+    div.shipment table tbody td {
+        font-size: 14px;
+        font-size: 0.9rem;
+    }
+}

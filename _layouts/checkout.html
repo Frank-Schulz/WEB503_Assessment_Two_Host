@@ -1,0 +1,70 @@
+---
+layout: page
+---
+
+<link rel="stylesheet" href="../assets/checkout.css" />
+
+<div class="content">
+    <section class="shipments">
+        <div id="itemsSummary">
+            <h4 class="order-details">Your order</h4>
+
+            <button name="ContinueButton" type="submit" class="continue">
+                Place Order
+            </button>
+
+            <div class="shipment pickup">
+                <div class="details">
+                    <div class="status">
+                        <strong class="pickup">{Destination}</strong>
+                    </div>
+                </div>
+
+                <table>
+                    <tbody>
+                        {% assign count = 0 %} {% assign totalCost = 0 %} {% for
+                        item in site.data.products %} {% assign count = count |
+                        plus:1 %} {% assign totalCost = totalCost |
+                        plus:item.price %}
+                        <tr>
+                            <td class="quantity">
+                                {{ item.inCart[1] }} <span>×</span>
+                            </td>
+                            <td class="product">
+                                {{ item.name }} ~ {{ item.info }}
+                            </td>
+                            <td class="price">${{ item.price }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <div class="sidebar">
+        <div class="sidebar-details">
+            <div id="trolleyTotals">
+                <table class="table trolleySubtotal">
+                    <tbody>
+                        <tr class="subtotal-items">
+                            <td style="text-align: left;">Items ({{ count }})</td>
+                            <td>${{ totalCost }}</td>
+                        </tr>
+
+                        <tr class="total">
+                            <td style="text-align: left;">TOTAL</td>
+                            <td>
+                                <span> NZ${{ totalCost }} </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="keep-shopping fas">
+            <a href="/cart"
+                ><span class="icon-trolley-left"></span> Return to cart</a
+            >
+        </div>
+    </div>
+</div>

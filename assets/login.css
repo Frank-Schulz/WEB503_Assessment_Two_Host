@@ -1,0 +1,102 @@
+/* #login-form {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+} */
+
+#login-form {
+    margin: 0 auto;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.form-popup {
+    background-color: whitesmoke;
+    width: 300px;
+    border-radius: 0 0 4px 4px;
+    border: 2px solid lightsteelblue;
+    border-top: 0;
+    padding: 10px;
+}
+
+.form-popup-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.form-popup-header-buttons {
+    display: table-cell;
+    font-size: 20px;
+    font-weight: 600;
+    /* height: 50px; */
+    /* width: 90px; */
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form-popup-header-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 25%;
+    width: 50%;
+}
+
+.form-popup-header-buttons.current {
+    background-color: lightsteelblue;
+}
+
+.form-popup-login,
+.form-popup-signup {
+    display: grid;
+    /* grid-row-gap: 10px; */
+    padding: 10px 20px 20px;
+}
+
+#login form label,
+#login form button,
+#signup form label,
+#signup form button {
+    margin: 10px 0 0 0;
+}
+
+#login form button,
+#signup form button {
+    padding: 5px 0;
+    width: 120px;
+    justify-self: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.tab-content div {
+    display: grid;
+}
+
+.tab-content > div:last-child {
+    display: none;
+}
+
+.form-popup-login {
+    /* display: grid; */
+    grid-template-rows: repeat(5, auto);
+}
+
+.form-popup-signup {
+    /* display: grid; */
+    grid-template-rows: repeat(10, auto);
+}
+
+/* .form-popup-login.current,
+.form-popup-signup.current {
+    display: grid;
+} */

@@ -1,0 +1,29 @@
+  - name: Blender
+    img: ../../assets/img/blender.jpg
+    info: This is a blender
+    desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque purus semper eget duis at. Risus commodo viverra maecenas accumsan lacus. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Quis blandit turpis cursus in hac. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc.
+    url: /category/kitchen/blender
+    price: '13.40'
+    tags: [Kitchen]
+    available: 10
+    inCart: [true, 1]
+
+  - name: Chair
+    img: ../../assets/img/chair.jpg
+    info: This is a chair
+    desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque purus semper eget duis at. Risus commodo viverra maecenas accumsan lacus. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Quis blandit turpis cursus in hac. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc.
+    url: /category/household/chair
+    price: '35.60'
+    tags: [Household]
+    available: 10
+    inCart: [false, 1]
+
+  - name: USB Stick
+    img: ../../assets/img/usb.jpg
+    info: This is a USB stick
+    desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque purus semper eget duis at. Risus commodo viverra maecenas accumsan lacus. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Quis blandit turpis cursus in hac. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc.
+    url: /category/electronics/usbStick
+    price: '7.50'
+    tags: [Electronics]
+    available: 0
+    inCart: [true, 1]

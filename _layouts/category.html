@@ -1,0 +1,64 @@
+---
+layout: page
+title: Category
+type: category
+---
+
+<div class="content">
+    {% include breadcrumbs.html %}
+
+    <!-- START CATEGORY PAGE -->
+    <link rel="stylesheet" href="/assets/category.css" />
+
+    {% include searchbar.html %}
+
+    <!-- LEFT SIDE -->
+    <!-- CATEGORIES -->
+    <div class="category-page">
+        <div class="category-page-left">
+            <div class="sidebar">
+                <div class="sidebar-title">Categories</div>
+                <div class="sidebar-list">
+                    <ul>
+                        {% for page in site.pages %} {% if page.type contains
+                        "category" %}
+                        <li class="sidebar-link">
+                            <a class="link-text" href="{{ page.url }}"
+                                >{{ page.title }}</a
+                            >
+                        </li>
+                        {% endif %} {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="category-page-right">
+            {% include filters.html %}
+
+            <div class="categories">
+                {% for page in site.pages %} {% if page.type contains "category"
+                %}
+                <a class="category-title" href="{{ page.url }}"
+                    >{{ page.title }}</a
+                >
+
+                <ul class="categories-products">
+                    {% for product in site.data.products %} {% if product.tags
+                    contains page.title %}
+                    <li class="">
+                        <a
+                            class="categories-products-product"
+                            href="{{ product.url }}"
+                            >{{ product.name }}</a
+                        >
+                    </li>
+                    {% endif %} {% endfor %}
+                </ul>
+
+                {% endif %} {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

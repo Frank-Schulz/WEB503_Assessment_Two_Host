@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+{% include breadcrumbs.html %} {% include searchbar.html %} {% include
+filters.html %}
+
+<!-- START ELECTRONICS -->
+<div class="content">
+    <h2 class="category-title">{{ page.title }}</h2>
+
+    <div class="category-products">
+        <ul class="category-products-list">
+            {% for product in site.data.products %} {% if product.tags contains
+            page.title %}
+            <li class="category-products-product">
+                <a class="link-text" href="{{ product.url }}">{{ product.name }}</a>
+            </li>
+            {% endif %} {% endfor %}
+        </ul>
+    </div>
+</div>

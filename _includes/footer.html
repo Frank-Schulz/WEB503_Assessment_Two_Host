@@ -1,0 +1,16 @@
+<!-- START FOOTER -->
+<footer>
+    <h2><a href="/">{{ site.title }}</a></h2>
+    <div class="footer-list">
+        <ul>
+            {% for page in site.pages %} {% if page.type contains
+            "category" %}
+            <li class="footer-link">
+                <a class="link-text" href="{{ page.url }}"
+                    >{{ page.title }}</a
+                >
+            </li>
+            {% endif %} {% endfor %}
+        </ul>
+    </div>
+</footer>

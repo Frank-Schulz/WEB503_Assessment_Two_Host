@@ -1,0 +1,11 @@
+- header: Slide One
+  p: "This is slide one"
+  bg: pink
+
+- header: Slider Two
+  p: "This is slide two"
+  bg: grey
+
+- header: Slider Three
+  p: "This is slide three"
+  bg: orange

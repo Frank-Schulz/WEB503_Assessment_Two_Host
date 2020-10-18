@@ -1,0 +1,8 @@
+  - name: Kitchen
+    tags: [Utensils, Cookbooks]
+
+  - name: Household
+    tags: [Furniture]
+
+  - name: Electronics
+    tags: [Tech, Wireless]

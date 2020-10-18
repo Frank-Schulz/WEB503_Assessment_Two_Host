@@ -1,0 +1,57 @@
+---
+layout: page
+---
+
+<!-- START CART -->
+<div class="content">
+    <link rel="stylesheet" href="../assets/cart.css" />
+
+    {% include searchbar.html %}
+
+    <ul class="cart-contents">
+        <li class="cart-btn cart-right"><a href="/checkout">Checkout</a></li>
+
+        <li class="cart-header">
+            <div class="cart-header-title">Item</div>
+            <div class="cart-header-quantity">Quantity</div>
+            <div class="cart-header-price">Price</div>
+        </li>
+
+        {% for item in site.data.products %} {% if item.inCart[0] == true %}
+        <li class="cart-item">
+            <div class="cart-item-img">
+                <div
+                    class="image"
+                    style="background-image: url('{{ item.img }}');"
+                ></div>
+            </div>
+
+            <div class="cart-item-main">
+                <div class="cart-item-name"><a href="{{ item.url }}">{{ item.name }}</a></div>
+                <div class="cart-item-info">{{ item.info }}</div>
+                {% if item.available > 0 %}
+                <div class="cart-item-available available">
+                    <span>In Stock</span>
+                </div>
+                {% else %}
+                <div class="cart-item-available unavailable">
+                    <span>Out of Stock</span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="cart-item-count">
+                {% if item.available > 0 %}
+                <input type="text" value="{{ item.inCart[1] }}" />
+                {% endif %}
+            </div>
+            <div class="cart-item-price">${{ item.price }}</div>
+            <div class="cart-item-remove">
+                <button type="button" onclick="removeItem()">Delete</button>
+            </div>
+        </li>
+        {% endif %} {% endfor %}
+
+        <li class="cart-price cart-right">Subtotal (# items): $</li>
+        <li class="cart-btn cart-right"><a href="/checkout">Checkout</a></li>
+    </ul>
+</div>

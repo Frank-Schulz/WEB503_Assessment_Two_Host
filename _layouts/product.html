@@ -1,0 +1,60 @@
+---
+layout: page
+---
+
+<!-- START CART -->
+<div class="content">
+    <link rel="stylesheet" href="../../assets/product.css" />
+    <link rel="stylesheet" href="../../assets/cart.css" />
+
+    {% include breadcrumbs.html %} {% include searchbar.html %}
+
+    <div class="product">
+        {% for item in site.data.products %} {% if page.url contains item.url %}
+        <div class="product-img">
+            <div
+                class="image"
+                style="background-image: url('{{ item.img }}');"
+            ></div>
+        </div>
+
+        <div class="product-main">
+            <div class="product-main-left">
+                <div class="product-name">{{ item.name }}</div>
+                <div class="product-info">{{ item.info }}</div>
+                {% if item.available > 0 %}
+                <div class="product-available available">
+                    <span>In Stock</span>
+                </div>
+                {% else %}
+                <div class="product-available unavailable">
+                    <span>Out of Stock</span>
+                </div>
+                {% endif %}
+                <input
+                    class="product-button add"
+                    type="button"
+                    value="Add to Cart"
+                />
+            </div>
+            <div class="product-main-right">
+                <div class="product-price"><span>${{ item.price }}</span></div>
+                {% if item.available > 0 %}
+                <div class="product-count">
+                    <input type="text" value="1" />
+                </div>
+                {% endif %}
+                <input
+                    class="product-button buy"
+                    type="button"
+                    value="BUY NOW!"
+                />
+            </div>
+        </div>
+        <div class="product-desc">
+            <div>Product Details</div>
+            {{ item.desc }}
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+</div>
